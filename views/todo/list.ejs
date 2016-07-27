@@ -1,0 +1,22 @@
+﻿<table class="table table-striped"> 
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Remove</th>
+    </tr>
+    <% if (todos) { %>
+      <% for (var i = 0; i < todos.length; i++) { %> 
+        <tr>
+            <td>
+                <a href="/todo/<%= todos[i]._id %>"> <%= todos[i].title %> </a>
+             </td>
+             <td>
+                <%= todos[i].description %>
+             </td>
+             <td>
+                <a class="btn btn-danger btn-sm" href="/todo/delete/<%= todos[i]._id %> "></a>
+             </td>
+        </tr>        
+    <% } %>   
+  <% } %>  
+</table>

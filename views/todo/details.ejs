@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../../partials/head %>
+</head>
+<body class="container todo">
+    <header>
+        <% include ../../partials/header %>
+    </header>
+    <main>       
+        <section class="panel panel-default jumbotron clearfix">
+           <div class="panel-default ">
+                <div class="panel-body details">
+                <% if (todo) { %>
+                    <div class="col-sm-12 content-header title">
+                        <div class="col-sm-10 pull-left">
+                           <h2> <%=todo.title %> </h2>
+                        </div>
+                        <div class="col-sm-1 pull-right">
+                            <a class="btn btn-primary" href="/todo/edit/<%=todo._id %>">Edit</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 form-group desc">
+                        <div> <b>Description: </b> <%=todo.description%> </div>
+                        <div> <b>Created On : </b> <%=todo.createDate%> </div>
+                    </div>
+                <% } %>             
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <% include ../../partials/footer %>
+    </footer>    
+</body>
+</html>

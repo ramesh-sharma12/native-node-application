@@ -1,0 +1,27 @@
+{
+    "version": "1.5.3",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "amd",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true
+    },
+    "files": [ 
+        "./server.ts",
+        "./app/typings/_custom.d.ts",        
+		"./app/typings/firebase/firebase.d.ts",
+		"./app/typings/q/q.d.ts",
+		"./app/typings/jquery/jquery.d.ts",       
+        "./app/typings/tsd.d.ts"
+    ],
+    "filesGlob": [
+        "./**/*.ts",
+        "./typings/**/*.ts"
+    ],
+    "compileOnSave": false
+}

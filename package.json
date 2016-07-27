@@ -1,0 +1,23 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "ToDo App using native node",
+  "license": "MIT",
+  "scripts": {
+    "compile":"lessc ./less/app.less ./dist/contents/css/app.css && lessc ./less/base.less ./dist/contents/css/base.css", 
+    "start": "tsc --sourcemap --outDir ./dist --rootDir ./ --module commonjs ./server.ts && node ./dist/server.js",
+    "test": "gulp build"
+  },
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "fs-extra": "^0.30.0",
+    "http": "0.0.0",
+    "mongoose": "^4.5.7",
+    "open": "0.0.5",
+    "path": "^0.12.7"
+  },
+  "dependencies": {}
+}

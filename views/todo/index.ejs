@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../../partials/head %>
+</head>
+<body class="container todo">
+    <header>
+        <% include ../../partials/header %>
+    </header>
+    <main>
+        <section class="row jumbotron">
+            <form class="form-group col-sm-12" action="/todo" method="post">
+                <div class="form-group col-sm-10  pad-20">
+                    <div class="padding">
+                        <input type='text' id="title" name="title" placeholder="Enter title" class="form-control col-sm-6">
+                    </div>
+                    <div class="padding">
+                        <textarea class="form-control col-sm-6 top-10" placeholder="Enter description"
+                                name="description" ></textarea>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 pad-20 top-30">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </section>
+        <section class="panel panel-default">
+            <% include ./list %>
+        </section>
+    </main>
+
+    <footer>
+        <% include ../../partials/footer %>
+    </footer>    
+</body>
+</html>

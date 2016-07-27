@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../../partials/head %>
+</head>
+<body class="container todo">
+    <header>
+        <% include ../../partials/header %>
+    </header>
+    <main>       
+        <section class="panel panel-default">
+           <div class="panel-default ">
+                <div class="panel-body">
+                    <form class="form-group" action="/todo/<%= todo._id %>" method="post">
+                        <div class="edit">
+                            <div class="edit.header"></div>
+                            <div class="pad-10">
+                                <input class="form-control" name="title" placeholder="Add Title"  value="<%=todo.title%>" />
+                            </div>
+                            <div class="pad-10">
+                                <textarea class="form-control" name="description" placeholder="Add Descritpion" ><%=todo.description%></textarea>
+                            </div>
+                            <div class="footer pull-right">
+                                <button type="submit" class="btn btn-success">Save</button>
+                                <a class="btn btn-default" href="/todo/<%= todo._id %>">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <% include ../../partials/footer %>
+    </footer>    
+</body>
+</html>

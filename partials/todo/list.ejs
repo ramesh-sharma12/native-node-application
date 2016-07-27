@@ -1,0 +1,18 @@
+﻿<ul id="todo-list" class="form list list-unstyled">
+ <% if (todos) { %>
+   <% for (var i = 0; i < todos.length; i++) { %>
+        <li class="row">
+            <div class="col-sm-12" onclick="getDetails($event)">   
+               <% todos[i] %>        
+                    <div class="col-sm-11">
+                        <div class="title"> <%= todos[i].title %>   </div>
+                        <div class="desc">  <%= todos[i].description %>   </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <button class="btn btn-danger btn-sm" onclick="removeTodo()"></button>
+                    </div>
+            </div>
+        </li>
+    <% } %>   
+  <% } %>  
+</ul>
